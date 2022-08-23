@@ -1,0 +1,26 @@
+{
+  "name": "@popovmp/json-value-parser",
+  "description": "Parses JSON values to number, boolean, null, or string",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Popov <info@forexsb.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/popovmp/json-value-parser",
+  "devDependencies": {
+    "@popovmp/mocha-tiny": "^2.3.0"
+  },
+  "scripts": {
+    "test": "mocha-tiny",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PopovMP/json-value-parser.git"
+  },
+  "keywords": [
+    "ini"
+  ],
+  "bugs": {
+    "url": "https://github.com/popovmp/json-value-parser/issues"
+  }
+}
