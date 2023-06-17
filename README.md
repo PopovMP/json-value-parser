@@ -2,7 +2,7 @@
 
 Code:
 ```javascript
-const {parseJsonValue} = require('@popovmp@json-value-parser')
+const {parseJsonValue} = require('@popovmp/json-value-parser')
 
 const json = {
 	"foo"  :  "bar",
@@ -15,17 +15,19 @@ const json = {
     "true" : "true",
     "false": "false",
     "nil"  : "null"
+};
+
+const obj = {};
+
+for (const key of Object.keys(json)) {
+    obj[key] = parseJsonValue(json[key]);
 }
-
-const obj = {}
-
-for (const key of Object.keys(json))
-	obj[key] = parseJsonValue(json[key])
 ```
 
-```js
+Output:
+```javascript
 const obj = {
-	foo  : 'bar',
+	foo  : "bar",
 	iNum :    42,
 	iPos :    42,
 	iNeg :   -42,
@@ -35,5 +37,5 @@ const obj = {
 	true :  true,
 	false: false,
 	nil  :  null,
-}
+};
 ```
